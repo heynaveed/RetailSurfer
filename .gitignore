@@ -1,0 +1,5 @@
+src/main/resources/NaveedSupremePaymentDetails.txt
+src/test/
+target/archive-tmp/
+target/generated-sources/
+.idea
