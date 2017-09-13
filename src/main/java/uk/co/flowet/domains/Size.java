@@ -1,5 +1,7 @@
 package uk.co.flowet.domains;
 
+import uk.co.flowet.exceptions.SizeArgumentNotRecognizedException;
+
 public class Size {
 
     private final String size;
@@ -23,6 +25,16 @@ public class Size {
 
         public Size size(){
             return size;
+        }
+
+        public static Supreme selectByArgument(String argument) throws SizeArgumentNotRecognizedException {
+            for (Supreme supreme : values()) {
+                if (supreme.size().equals(argument.toLowerCase())) {
+                    return supreme;
+                }
+            }
+
+            throw new SizeArgumentNotRecognizedException();
         }
     }
 

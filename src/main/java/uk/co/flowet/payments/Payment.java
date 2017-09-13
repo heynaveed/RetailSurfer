@@ -1,7 +1,7 @@
 package uk.co.flowet.payments;
 
-import uk.co.flowet.browser.Browser;
+import uk.co.flowet.domains.Actor;
 
 public interface Payment {
-    void fillForm(Browser browser);
+    void fillForm(Actor actor);
 }

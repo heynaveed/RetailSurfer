@@ -7,55 +7,54 @@ import org.jsoup.select.Elements;
 import uk.co.flowet.actions.Click;
 import uk.co.flowet.actions.Go;
 import uk.co.flowet.actions.Change;
-import uk.co.flowet.payments.SupremePayment;
+import uk.co.flowet.actions.MakePayment;
+import uk.co.flowet.domains.Size;
+import uk.co.flowet.exceptions.SizeArgumentNotRecognizedException;
 import uk.co.flowet.tools.WaitFor;
 
 import java.util.*;
 
 import static uk.co.flowet.RetailResale.*;
-import static uk.co.flowet.brands.Brand.SUPREME;
+import static uk.co.flowet.domains.Actor.TEST;
 import static uk.co.flowet.domains.Button.Supreme.*;
 import static uk.co.flowet.domains.Category.Supreme.*;
-import static uk.co.flowet.domains.Item.Supreme.*;
-import static uk.co.flowet.domains.Size.Supreme.*;
+import static uk.co.flowet.domains.Item.*;
 
 public class SupremeSurfer extends Surfer {
 
-    private final String[] args;
     private final Map<String, Integer> itemLinks;
     private String targetItemLink;
     private boolean shouldCheckForColour = false;
+    private Document doc;
+    private Elements divs;
 
-    SupremeSurfer(String[] args){
-        this.args = args;
+    SupremeSurfer(){
         LOGGER.info("Supreme Surfer instantiated!");
-        this.brand = SUPREME;
         itemLinks = new HashMap<>();
-        startURL = brand.URL() + "shop";
+        startURL = BRAND.URL() + "shop";
     }
 
     @Override
-    protected void surf(String[] args) {
+    protected void surf() {
         LOGGER.info("Now surfing Supreme...");
 
-        final List<String> items = Arrays.asList(args).subList(2, args.length);
-        final String[] firstItem = items.get(0).split("@");
+        final String[] firstItem = ITEMS.get(0);
 
-        boolean hasStarted = false;
+        boolean releaseIsLive = false;
         int refreshCount = 0;
 
         do{
-            Go.to(brand.URL() + endpoint(firstItem[CATEGORY.index()])).now();
-            Document doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
-            Elements divs = returnElements(doc, "a[class]");
+            Go.to(BRAND.URL() + endpoint(firstItem[CATEGORY.index()])).now();
+            doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
+            divs = returnElements(doc, "a[class]");
 
             if(divs.stream().anyMatch(title -> title.text().toLowerCase()
                             .equals(firstItem[TITLE.index()].toLowerCase()))){
                 LOGGER.info("Release has dropped! GO! GO! GO!");
-                hasStarted = true;
+                releaseIsLive = true;
             }
             else{
-                if(refreshCount < 50){
+                if(refreshCount < 200){
                     refreshCount++;
                     WaitFor.around(3000).milliseconds();
                 }
@@ -65,16 +64,17 @@ public class SupremeSurfer extends Surfer {
                 }
             }
 
-        } while(!hasStarted);
+        } while(!releaseIsLive);
 
-        for (int i = 0; i < items.size(); i++) {
-            LOGGER.info("Searching for item: " + items.get(i));
+        for (int i = 0; i < ITEMS.size(); i++) {
+            LOGGER.info("Searching for item: " + ITEMS.get(i)[0]);
             shouldCheckForColour = false;
-            final String[] item = items.get(i).split("@");
+            final String[] item = ITEMS.get(i);
+            final String itemSize = item[SIZE.index()];
             String link = null;
 
             if(i != 0) {
-                Go.to(brand.URL() + endpoint(item[CATEGORY.index()])).now();
+                Go.to(BRAND.URL() + endpoint(item[CATEGORY.index()])).now();
             }
 
             Document doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
@@ -95,18 +95,23 @@ public class SupremeSurfer extends Surfer {
             if(shouldCheckForColour) {
                 itemLinks.forEach((key, value) -> {
                     if (value > 1) {
-                        targetItemLink = brand.URL() + key;
+                        targetItemLink = BRAND.URL() + key;
                     }
                 });
             }
             else{
-                targetItemLink = brand.URL() + link;
+                targetItemLink = BRAND.URL() + link;
             }
 
             Go.to(targetItemLink).now();
 
-            if(!item[SIZE.index()].equals("none")) {
-                Change.dropdown("size").to(MEDIUM.size()).now();
+            if(!itemSize.equals("none")) {
+                try {
+                    Size.Supreme size = Size.Supreme.selectByArgument(itemSize);
+                    Change.dropdown("size").to(size.size()).now();
+                } catch (SizeArgumentNotRecognizedException e) {
+                    e.printStackTrace();
+                }
             }
 
             Click.the(ADD_TO_BASKET.button()).now();
@@ -114,8 +119,8 @@ public class SupremeSurfer extends Surfer {
         }
 
         WaitFor.exactly(260).milliseconds();
-        Go.to(SUPREME.URL() + CHECKOUT.category().endpoint()).now();
-        new SupremePayment().fillForm(BROWSER);
+        Go.to(BRAND.URL() + CHECKOUT.category().endpoint()).now();
+        MakePayment.with(TEST).to(BRAND).now();
         WaitFor.exactly(260).milliseconds();
         Click.the(PROCESS_PAYMENT.button()).now();
         WaitFor.exactly(60000).milliseconds();
@@ -126,7 +131,7 @@ public class SupremeSurfer extends Surfer {
 
     @Override
     public void run() {
-        surf(args);
+        surf();
     }
 
     private boolean checkForItem(String[] item, String target){
