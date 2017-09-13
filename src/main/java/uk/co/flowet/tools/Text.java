@@ -3,7 +3,7 @@ package uk.co.flowet.tools;
 import java.io.*;
 import java.util.LinkedList;
 
-import static uk.co.flowet.RetailResale.*;
+import static uk.co.flowet.RetailSurfer.*;
 
 public class Text {
 

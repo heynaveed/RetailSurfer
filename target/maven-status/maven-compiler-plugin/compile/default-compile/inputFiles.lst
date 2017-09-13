@@ -6,12 +6,12 @@
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/surfers/Surfer.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/exceptions/ActorArgumentNotRecognizedException.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/domains/Item.java
-/Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/RetailResale.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/actions/MakePayment.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/tools/WaitFor.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/actions/Action.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/domains/Button.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/domains/Argument.java
+/Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/RetailSurfer.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/tools/Text.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/domains/PaymentField.java
 /Users/naveed.shihab/Desktop/flowet/apps/RetailSurfer/src/main/java/uk/co/flowet/browser/Page.java

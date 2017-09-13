@@ -2,7 +2,7 @@ package uk.co.flowet.tools;
 
 import java.util.Random;
 
-import static uk.co.flowet.RetailResale.*;
+import static uk.co.flowet.RetailSurfer.*;
 
 public class WaitFor {
 

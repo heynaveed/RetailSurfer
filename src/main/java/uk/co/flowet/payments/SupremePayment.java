@@ -8,8 +8,8 @@ import uk.co.flowet.tools.Text;
 
 import java.util.LinkedList;
 
-import static uk.co.flowet.RetailResale.BROWSER;
-import static uk.co.flowet.RetailResale.LOGGER;
+import static uk.co.flowet.RetailSurfer.BROWSER;
+import static uk.co.flowet.RetailSurfer.LOGGER;
 import static uk.co.flowet.domains.Button.Supreme.TERMS;
 
 public class SupremePayment implements Payment{

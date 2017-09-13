@@ -14,8 +14,8 @@ import uk.co.flowet.tools.WaitFor;
 
 import java.util.*;
 
-import static uk.co.flowet.RetailResale.*;
-import static uk.co.flowet.domains.Actor.TEST;
+import static uk.co.flowet.RetailSurfer.*;
+import static uk.co.flowet.RetailSurfer.ACTOR;
 import static uk.co.flowet.domains.Button.Supreme.*;
 import static uk.co.flowet.domains.Category.Supreme.*;
 import static uk.co.flowet.domains.Item.*;
@@ -25,6 +25,10 @@ public class SupremeSurfer extends Surfer {
     private final Map<String, Integer> itemLinks;
     private String targetItemLink;
     private boolean shouldCheckForColour = false;
+    private boolean shouldSkipItem = false;
+    private boolean releaseIsLive = false;
+    private int maxItemCheckCount = 200;
+    private int refreshCount = 0;
     private Document doc;
     private Elements divs;
 
@@ -38,36 +42,15 @@ public class SupremeSurfer extends Surfer {
     protected void surf() {
         LOGGER.info("Now surfing Supreme...");
 
-        final String[] firstItem = ITEMS.get(0);
-
-        boolean releaseIsLive = false;
-        int refreshCount = 0;
-
-        do{
-            Go.to(BRAND.URL() + endpoint(firstItem[CATEGORY.index()])).now();
-            doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
-            divs = returnElements(doc, "a[class]");
-
-            if(divs.stream().anyMatch(title -> title.text().toLowerCase()
-                            .equals(firstItem[TITLE.index()].toLowerCase()))){
-                LOGGER.info("Release has dropped! GO! GO! GO!");
-                releaseIsLive = true;
-            }
-            else{
-                if(refreshCount < 200){
-                    refreshCount++;
-                    WaitFor.around(3000).milliseconds();
-                }
-                else {
-                    LOGGER.info("Could not find item.");
-                    System.exit(0);
-                }
-            }
-
-        } while(!releaseIsLive);
-
         for (int i = 0; i < ITEMS.size(); i++) {
             LOGGER.info("Searching for item: " + ITEMS.get(i)[0]);
+            shouldSkipItem = false;
+            do{
+                releaseIsLive = checkItemIsLive(ITEMS.get(i));
+            } while(!releaseIsLive);
+
+            if(shouldSkipItem) continue;
+
             shouldCheckForColour = false;
             final String[] item = ITEMS.get(i);
             final String itemSize = item[SIZE.index()];
@@ -76,9 +59,6 @@ public class SupremeSurfer extends Surfer {
             if(i != 0) {
                 Go.to(BRAND.URL() + endpoint(item[CATEGORY.index()])).now();
             }
-
-            Document doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
-            Elements divs = returnElements(doc, "a[class]");
 
             for (Element div : divs) {
                 final String divText = div.text().toLowerCase();
@@ -116,11 +96,12 @@ public class SupremeSurfer extends Surfer {
 
             Click.the(ADD_TO_BASKET.button()).now();
             itemLinks.clear();
+            refreshCount = 0;
         }
 
         WaitFor.exactly(260).milliseconds();
         Go.to(BRAND.URL() + CHECKOUT.category().endpoint()).now();
-        MakePayment.with(TEST).to(BRAND).now();
+        MakePayment.with(ACTOR).to(BRAND).now();
         WaitFor.exactly(260).milliseconds();
         Click.the(PROCESS_PAYMENT.button()).now();
         WaitFor.exactly(60000).milliseconds();
@@ -150,5 +131,33 @@ public class SupremeSurfer extends Surfer {
         }
 
         return false;
+    }
+
+    private boolean checkItemIsLive(String[] item){
+        boolean itemIsLive = false;
+        Go.to(BRAND.URL() + endpoint(item[CATEGORY.index()])).now();
+        doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
+        divs = returnElements(doc, "a[class]");
+
+        if(divs.stream().anyMatch(title -> title.text().toLowerCase()
+                .equals(item[TITLE.index()].toLowerCase()))){
+            LOGGER.info("Item " + item[TITLE.index()] + " has dropped! GO! GO! GO!");
+            itemIsLive = true;
+            releaseIsLive = true;
+            maxItemCheckCount = 2;
+        }
+        else{
+            if(refreshCount < maxItemCheckCount){
+                refreshCount++;
+                WaitFor.around(3000).milliseconds();
+            }
+            else {
+                LOGGER.info("Could not find item: " + item[TITLE.index()]);
+                shouldSkipItem = true;
+                return true;
+            }
+        }
+
+        return itemIsLive;
     }
 }

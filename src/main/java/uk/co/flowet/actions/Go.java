@@ -1,7 +1,7 @@
 package uk.co.flowet.actions;
 
-import static uk.co.flowet.RetailResale.BROWSER;
-import static uk.co.flowet.RetailResale.LOGGER;
+import static uk.co.flowet.RetailSurfer.BROWSER;
+import static uk.co.flowet.RetailSurfer.LOGGER;
 
 public class Go implements Action {
 

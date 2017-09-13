@@ -1,10 +1,10 @@
 package uk.co.flowet.actions;
 
 import org.openqa.selenium.By;
-import uk.co.flowet.RetailResale;
+import uk.co.flowet.RetailSurfer;
 import uk.co.flowet.domains.Button;
 
-import static uk.co.flowet.RetailResale.BROWSER;
+import static uk.co.flowet.RetailSurfer.BROWSER;
 
 public class Click implements Action{
 
@@ -20,7 +20,7 @@ public class Click implements Action{
 
     @Override
     public void now() {
-        RetailResale.LOGGER.info("Clicking " + button.name() + " button...");
+        RetailSurfer.LOGGER.info("Clicking " + button.name() + " button...");
         BROWSER.getDriver().findElement(By.xpath(button.xPath())).click();
     }
 }

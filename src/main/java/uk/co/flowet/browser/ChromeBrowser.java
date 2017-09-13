@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static uk.co.flowet.RetailResale.LOGGER;
+import static uk.co.flowet.RetailSurfer.LOGGER;
 
 public class ChromeBrowser implements Browser {
 
