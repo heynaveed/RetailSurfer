@@ -12,4 +12,4 @@ java -jar target/RetailSurfer-1.0-SNAPSHOT-jar-with-dependencies.jar\
     "supreme"\
     "2017-10-05 10:59:00"\
     "Supreme®/Stone Island® Hooded Sweatshirt@black@sweatshirts@none@naveed"\
-    "Supreme®/Stone Island® S/S Top@black@shirts@none@naveed"
+    "Supreme®/Stone Island® S/S Top@black@tops_sweaters@none@naveed"
