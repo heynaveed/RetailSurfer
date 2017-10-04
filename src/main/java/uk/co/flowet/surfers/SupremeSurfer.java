@@ -44,21 +44,18 @@ public class SupremeSurfer extends Surfer {
 
         for (int i = 0; i < ITEMS.size(); i++) {
             LOGGER.info("Searching for item: " + ITEMS.get(i)[0]);
+
+            final String[] item = ITEMS.get(i);
+            final String itemSize = item[SIZE.index()];
+            String link = null;
             shouldSkipItem = false;
+            shouldCheckForColour = false;
+
             do{
                 releaseIsLive = checkItemIsLive(ITEMS.get(i));
             } while(!releaseIsLive);
 
             if(shouldSkipItem) continue;
-
-            shouldCheckForColour = false;
-            final String[] item = ITEMS.get(i);
-            final String itemSize = item[SIZE.index()];
-            String link = null;
-
-            if(i != 0) {
-                Go.to(BRAND.URL() + endpoint(item[CATEGORY.index()])).now();
-            }
 
             for (Element div : divs) {
                 final String divText = div.text().toLowerCase();

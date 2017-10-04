@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbed0ac3-5698-4db3-9ab9-497c19beb8e7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/RetailResale-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/RetailResale.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/RetailResale.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/RetailSurfer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/actions/Change.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/actions/Change.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/actions/Click.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/actions/Click.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/actions/Go.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/actions/Go.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/browser/ChromeBrowser.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/browser/ChromeBrowser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/domains/Item.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/domains/Item.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/domains/Size$Supreme.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/domains/Size$Supreme.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/domains/Size.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/domains/Size.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/payments/SupremePayment.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/payments/SupremePayment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/SupremeSurfer.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/SupremeSurfer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/Surfer.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/Surfer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/SurferBuilder$1.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/SurferBuilder$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/SurferBuilder.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/surfers/SurferBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/tools/Text.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/tools/Text.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uk/co/flowet/tools/WaitFor.class" afterPath="$PROJECT_DIR$/target/classes/uk/co/flowet/tools/WaitFor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.sh" afterPath="$PROJECT_DIR$/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/actions/Change.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/actions/Change.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/actions/Click.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/actions/Click.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/actions/Go.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/actions/Go.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/browser/ChromeBrowser.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/browser/ChromeBrowser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/payments/SupremePayment.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/payments/SupremePayment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/surfers/SupremeSurfer.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/surfers/SupremeSurfer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/tools/Text.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/tools/Text.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/flowet/tools/WaitFor.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/flowet/tools/WaitFor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,7 +26,7 @@
       <file leaf-file-name="RetailSurfer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/RetailSurfer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
+            <state relative-caret-position="300">
               <caret line="39" column="61" lean-forward="false" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -69,7 +41,7 @@
       <file leaf-file-name="SurferBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/surfers/SurferBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="180">
               <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,11 +53,12 @@
       <file leaf-file-name="SupremeSurfer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/surfers/SupremeSurfer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="146" column="33" lean-forward="false" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="33" />
+            <state relative-caret-position="564">
+              <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#checkForItem#0;class#SupremeSurfer#0" expanded="false" />
+                <element signature="method#checkItemIsLive#0;class#SupremeSurfer#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -256,8 +229,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,8 +316,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -537,7 +510,10 @@
       <workItem from="1505292830901" duration="9000" />
       <workItem from="1505292864772" duration="2463000" />
       <workItem from="1505295929689" duration="5866000" />
-      <workItem from="1505309009755" duration="5436000" />
+      <workItem from="1505309009755" duration="6492000" />
+      <workItem from="1505815203348" duration="4000" />
+      <workItem from="1507112659530" duration="135000" />
+      <workItem from="1507112885212" duration="512000" />
     </task>
     <task id="LOCAL-00001" summary="Add preliminary logistic classes.">
       <created>1504346000710</created>
@@ -721,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504733300117</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Refactor refresh function.">
+      <created>1505315672801</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1505315672801</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -757,11 +740,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93159000" />
+    <option name="totallyTimeSpent" value="94866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -770,19 +752,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18500605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6094317" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18500605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26609442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27682403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -856,7 +838,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove push to git script." />
     <MESSAGE value="Add as maven project + selenium dependencies." />
     <MESSAGE value="Add selenium, hamcrest and junit dependencies + refactor to uk.co.flowet packages." />
     <MESSAGE value="Now opens baseURL in chromebrowser." />
@@ -881,7 +862,8 @@
     <MESSAGE value="Determine whether to check for a colour or not." />
     <MESSAGE value="Apply gitignore policies." />
     <MESSAGE value="Huge refactoring." />
-    <option name="LAST_COMMIT_MESSAGE" value="Huge refactoring." />
+    <MESSAGE value="Refactor refresh function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor refresh function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -980,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,10 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding>
-            <element signature="e#149#150#0" expanded="true" />
-            <element signature="e#232#233#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1137,7 +1113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,7 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,18 +1134,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/domains/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/domains/Product.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/payments/SupremePayment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1223,7 +1188,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/RetailSurfer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="300">
           <caret line="39" column="61" lean-forward="false" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1238,13 +1203,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/surfers/SurferBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="180">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1262,11 +1226,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/flowet/surfers/SupremeSurfer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="146" column="33" lean-forward="false" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="33" />
+        <state relative-caret-position="564">
+          <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#checkForItem#0;class#SupremeSurfer#0" expanded="false" />
+            <element signature="method#checkItemIsLive#0;class#SupremeSurfer#0" expanded="false" />
           </folding>
         </state>
       </provider>
