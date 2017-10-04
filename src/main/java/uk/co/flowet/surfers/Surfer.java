@@ -2,7 +2,6 @@ package uk.co.flowet.surfers;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import uk.co.flowet.domains.Brand;
 
 import java.util.TimerTask;
 
