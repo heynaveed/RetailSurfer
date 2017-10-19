@@ -145,7 +145,7 @@ public class SupremeSurfer extends Surfer {
         else{
             if(refreshCount < maxItemCheckCount){
                 refreshCount++;
-                WaitFor.around(3000).milliseconds();
+                WaitFor.around(500).milliseconds();
             }
             else {
                 LOGGER.info("Could not find item: " + item[TITLE.index()]);
