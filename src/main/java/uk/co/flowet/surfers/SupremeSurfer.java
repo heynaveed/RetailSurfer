@@ -11,6 +11,7 @@ import uk.co.flowet.actions.Change;
 import uk.co.flowet.actions.MakePayment;
 import uk.co.flowet.domains.Size;
 import uk.co.flowet.exceptions.SizeArgumentNotRecognizedException;
+import uk.co.flowet.tools.MatchString;
 import uk.co.flowet.tools.WaitFor;
 
 import java.util.HashMap;
@@ -24,7 +25,10 @@ import static uk.co.flowet.domains.Item.*;
 
 public class SupremeSurfer extends Surfer {
 
+    private static final Integer MIN_RATIO = 60;
+
     private final Map<String, Integer> itemLinks;
+    private final Map<String, Integer> scores;
     private String targetItemLink;
     private boolean shouldCheckForColour = false;
     private boolean shouldSkipItem = false;
@@ -37,6 +41,7 @@ public class SupremeSurfer extends Surfer {
     SupremeSurfer(){
         LOGGER.info("Supreme Surfer instantiated!");
         itemLinks = new HashMap<>();
+        scores = new HashMap<>();
         startURL = BRAND.URL() + "shop";
     }
 
@@ -62,9 +67,8 @@ public class SupremeSurfer extends Surfer {
             if (shouldSkipItem) continue;
 
             for (Element div : divs) {
-                final String divText = div.text().toLowerCase();
 
-                if (checkForItem(item, divText)) {
+                if (checkForItem(item, div.text())) {
                     link = div.attr("href");
 
                     if (!shouldCheckForColour) break;
@@ -114,17 +118,18 @@ public class SupremeSurfer extends Surfer {
     }
 
     private boolean checkForItem(String[] item, String target){
+
         if(!item[COLOR.index()].equals("none")){
             shouldCheckForColour = true;
         }
 
         if(shouldCheckForColour){
-            if (target.equals(item[TITLE.index()].toLowerCase())
-                    || target.equals(item[COLOR.index()].toLowerCase())) {
+            if(MatchString.byRatio(item[TITLE.index()], target) > MIN_RATIO
+                    || target.toLowerCase().equals(item[COLOR.index()].toLowerCase())) {
                 return true;
             }
         }
-        else if(target.equals(item[TITLE.index()].toLowerCase())){
+        else if(MatchString.byRatio(item[TITLE.index()], target) > MIN_RATIO) {
             return true;
         }
 
@@ -132,12 +137,14 @@ public class SupremeSurfer extends Surfer {
     }
 
     private void checkItemIsLive(String[] item){
+        scores.clear();
         Go.to(BRAND.URL() + endpoint(item[CATEGORY.index()])).now();
         doc = Jsoup.parse(BROWSER.getDriver().getPageSource());
         divs = returnElements(doc, "a[class]");
 
-        if(divs.stream().anyMatch(title -> title.text().toLowerCase()
-                .equals(item[TITLE.index()].toLowerCase()))){
+        divs.forEach(title -> scores.put(title.text(), MatchString.byRatio(title.text(), item[TITLE.index()])));
+
+        if(scores.values().stream().anyMatch(score -> score > MIN_RATIO)){
             LOGGER.info("Item " + item[TITLE.index()] + " has dropped! GO! GO! GO!");
             maxItemCheckCount = 2;
             shouldCheckForItem = true;

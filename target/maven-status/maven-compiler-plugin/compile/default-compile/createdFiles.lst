@@ -9,6 +9,7 @@ uk/co/flowet/exceptions/SizeArgumentNotRecognizedException.class
 uk/co/flowet/actions/Change.class
 uk/co/flowet/domains/Item.class
 uk/co/flowet/RetailSurfer.class
+uk/co/flowet/tools/MatchString.class
 uk/co/flowet/browser/BrowserAssertions.class
 uk/co/flowet/domains/PaymentField$Supreme.class
 uk/co/flowet/domains/Size$1.class
